@@ -20,6 +20,7 @@ Mikäli haluatte kokeilla peliä itse, sen pitäisi onnistua lataamalla reposito
 
 ### Mietteet projektin jälkeen
 Hauskaa työstää, vaikkakin aika ajoittain haastavaa, sekä erittäin opettavainen monella tavalla, etenkin erilaisten muuttujien ja sisennyksien tarkkailun ja seurannan kanssa.
-Omien valintojeni ja ratkaisujen vertaaminen käyttämiini lähteisiin on ollut myös mielenkiintoista, kun miettii miten monia erilaisia keinoja samojen ongelmien ratkaisussa tai toimintojen luomisessa voi olla, ja olenkin aika kiinnostunut siitä voisiko koodiania yksinkertaistaa ja "tehostaa" joissain kohdin, mutta se kysymys myöhemmälle ajalle.
+Omien valintojeni ja ratkaisujen vertaaminen käyttämiini lähteisiin on ollut myös mielenkiintoista, kun miettii miten monia erilaisia keinoja samojen ongelmien ratkaisussa tai toimintojen luomisessa voi olla, ja olenkin aika kiinnostunut siitä voisiko koodiania yksinkertaistaa ja "tehostaa" joissain kohdin, mutta se on kysymys myöhemmälle ajalle.
+
 
 
