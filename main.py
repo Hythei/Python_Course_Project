@@ -19,7 +19,7 @@ bg_music = pygame.mixer.Sound("audio/music.wav")
 collision_sound = pygame.mixer.Sound("audio/collision.mp3")
 collision_sound.set_volume(0.5)
 
-class Player(pygame.sprite.Sprite):
+class Player(pygame.sprite.Sprite): # Pelaaja-luokka, joka perii pygame.sprite.Sprite-luokan ominaisuudet
     def __init__(self):
         super().__init__()
         player_walk1 = pygame.image.load("graphics/player/player_walk_1.png").convert_alpha()
@@ -79,9 +79,9 @@ class Player(pygame.sprite.Sprite):
             return True
         return False
 
-class Snail(pygame.sprite.Sprite):
-    def __init__(self):
-        super().__init__()
+class Snail(pygame.sprite.Sprite): # Vihollis-luokka, joka perii pygame.sprite.Sprite-luokan ominaisuudet
+    def __init__(self): 
+        super().__init__() #Miksi super().__init__()? Koska haluamme käyttää pygame.sprite.Sprite-luokan ominaisuuksia
         snail_1 = pygame.image.load("graphics/snail/snail1.png").convert_alpha()
         snail_2 = pygame.image.load("graphics/snail/snail2.png").convert_alpha()
         self.snail_walk = [snail_1, snail_2]
@@ -104,7 +104,7 @@ class Snail(pygame.sprite.Sprite):
             self.image_index = 0
         self.image = self.snail_walk[int(self.image_index)]
 
-class Fly(pygame.sprite.Sprite):
+class Fly(pygame.sprite.Sprite): # Vihollis-luokka, joka perii pygame.sprite.Sprite-luokan ominaisuudet
     def __init__(self):
         super().__init__()
         fly_1 = pygame.image.load("graphics/fly/fly1.png").convert_alpha()
@@ -130,7 +130,7 @@ class Fly(pygame.sprite.Sprite):
             self.image_index = 0
         self.image = self.fly_walk[int(self.image_index)]
 
-class Collectible(pygame.sprite.Sprite):
+class Collectible(pygame.sprite.Sprite): # Kerättävä-luokka, joka perii pygame.sprite.Sprite-luokan ominaisuudet
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load("graphics/collectible/collectible1.jpg").convert_alpha()
@@ -189,12 +189,12 @@ def main_menu():
 
 def game(single_run):
     player = Player()
-    all_sprites = pygame.sprite.Group()
-    enemies = pygame.sprite.Group()
-    all_sprites.add(player)
-    collectibles = pygame.sprite.Group()
+    all_sprites = pygame.sprite.Group() # Miksi käytämme Group-luokkaa? Koska haluamme hallita useita sprite-olioita samanaikaisesti
+    enemies = pygame.sprite.Group() # Miksi enemies? Koska haluamme hallita vihollisia erikseen
+    all_sprites.add(player) # Lisää pelaaja sprite-olioihin
+    collectibles = pygame.sprite.Group() # Lisää kerättävät sprite-oliot
     bg_music.play(loops = -1)
-    bg_music.set_volume(0.3)
+    bg_music.set_volume(0.2)
 
     background = Background("graphics/sky.png", "graphics/ground.png")
 
